@@ -17,7 +17,7 @@ mvn spring-boot:run
 `
 
 ## Postman test
-To test in local, you can import the following Postman [collection.](postman/Test SmartJobs.postman_collection.json)
+To test in local, you can import the following Postman [collection.](postman/Test_SmartJobs.postman_collection.json)
 
 ## Swagger test
 To test on the web, enter the following link
