@@ -22,7 +22,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @Tag(name = "User Controller", description = "Se encarga de manejar los usuarios.")
-
 @RequestMapping(value = "/v1/users")
 @CrossOrigin
 @Validated
@@ -38,7 +37,7 @@ public interface UserController {
 			@ApiResponse(responseCode = "400", description = "Errores en body"),
 			@ApiResponse(responseCode = "412", description = "Error en email"),
 			@ApiResponse(responseCode = "500", description = "Error interno en el servidor al intentar crear el usuario")})
-	public ResponseEntity<UserDTO> create(
+	ResponseEntity<UserDTO> create(
 			@RequestHeader("Authorization") String authorization,
 			@Valid @RequestBody  UserRequest userRequest);
 

@@ -5,6 +5,7 @@ import com.smartjobs.test.users.config.security.JwtTokenUtil;
 import com.smartjobs.test.users.domain.dto.LoginRequest;
 import com.smartjobs.test.users.domain.dto.jwt.JwtResponse;
 import com.smartjobs.test.users.service.impl.JwtUserDetailsService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(value = "/v1/security")
+@Tag(name = "Security Controller", description = "Se encarga de manejar el login de los usuarios.")
 @CrossOrigin
 @AllArgsConstructor
 public class SecurityController {
